@@ -14,6 +14,7 @@ To write a YACC program to recognize a valid variable which starts with a letter
 7.	Compile these with the C compiler as gcc lex.yy.c y.tab.c
 8.	Enter a statement as input and the valid variables are identified as output.
 # PROGRAM
+# L FILE
 ```
 %{
 #include "y.tab.h"
@@ -30,6 +31,7 @@ int yywrap() {
     return 1;
 }
 ```
+# Y FILE
 ```
 %{
 #include <stdio.h>
@@ -66,7 +68,7 @@ void yyerror(const char *msg) {
 }
 ```
 # Output
-<img width="937" height="700" alt="Screenshot 2025-10-15 111245" src="https://github.com/user-attachments/assets/5369ca2a-7222-4696-a931-fd3d7c83aa77" />
+<img width="747" height="591" alt="Screenshot 2025-10-15 113608" src="https://github.com/user-attachments/assets/b28722a0-68f1-4405-9e54-fe2821ce4f85" />
 
 # Result
  A YACC program to recognize a valid variable which starts with a letter followed by any number of letters or digits is executed successfully and the output is verified.
